@@ -1,0 +1,115 @@
+|velocimetro
+enable <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+reset => counter_16:inst.reset
+clock => counter_16:inst.clock
+V[0] => lpm_compare0:inst2.datab[0]
+V[1] => lpm_compare0:inst2.datab[1]
+V[2] => lpm_compare0:inst2.datab[2]
+V[3] => lpm_compare0:inst2.datab[3]
+Stop => inst3.IN1
+
+
+|velocimetro|lpm_compare0:inst2
+dataa[0] => lpm_compare:LPM_COMPARE_component.dataa[0]
+dataa[1] => lpm_compare:LPM_COMPARE_component.dataa[1]
+dataa[2] => lpm_compare:LPM_COMPARE_component.dataa[2]
+dataa[3] => lpm_compare:LPM_COMPARE_component.dataa[3]
+datab[0] => lpm_compare:LPM_COMPARE_component.datab[0]
+datab[1] => lpm_compare:LPM_COMPARE_component.datab[1]
+datab[2] => lpm_compare:LPM_COMPARE_component.datab[2]
+datab[3] => lpm_compare:LPM_COMPARE_component.datab[3]
+alb <= lpm_compare:LPM_COMPARE_component.alb
+
+
+|velocimetro|lpm_compare0:inst2|lpm_compare:LPM_COMPARE_component
+dataa[0] => cmpr_2mg:auto_generated.dataa[0]
+dataa[1] => cmpr_2mg:auto_generated.dataa[1]
+dataa[2] => cmpr_2mg:auto_generated.dataa[2]
+dataa[3] => cmpr_2mg:auto_generated.dataa[3]
+datab[0] => cmpr_2mg:auto_generated.datab[0]
+datab[1] => cmpr_2mg:auto_generated.datab[1]
+datab[2] => cmpr_2mg:auto_generated.datab[2]
+datab[3] => cmpr_2mg:auto_generated.datab[3]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+alb <= cmpr_2mg:auto_generated.alb
+aeb <= <GND>
+agb <= <GND>
+aleb <= <GND>
+aneb <= <GND>
+ageb <= <GND>
+
+
+|velocimetro|lpm_compare0:inst2|lpm_compare:LPM_COMPARE_component|cmpr_2mg:auto_generated
+alb <= alb_int.DB_MAX_OUTPUT_PORT_TYPE
+dataa[0] => op_1.IN7
+dataa[1] => op_1.IN5
+dataa[2] => op_1.IN3
+dataa[3] => op_1.IN1
+datab[0] => op_1.IN8
+datab[1] => op_1.IN6
+datab[2] => op_1.IN4
+datab[3] => op_1.IN2
+
+
+|velocimetro|counter_16:inst
+reset => reg_fstate.state1.OUTPUTSELECT
+reset => reg_fstate.state2.OUTPUTSELECT
+reset => reg_fstate.state3.OUTPUTSELECT
+reset => reg_fstate.state4.OUTPUTSELECT
+reset => reg_fstate.state5.OUTPUTSELECT
+reset => reg_fstate.state6.OUTPUTSELECT
+reset => reg_fstate.state7.OUTPUTSELECT
+reset => reg_fstate.state8.OUTPUTSELECT
+reset => reg_fstate.state9.OUTPUTSELECT
+reset => reg_fstate.state10.OUTPUTSELECT
+reset => reg_fstate.state11.OUTPUTSELECT
+reset => reg_fstate.state12.OUTPUTSELECT
+reset => reg_fstate.state13.OUTPUTSELECT
+reset => reg_fstate.state14.OUTPUTSELECT
+reset => reg_fstate.state15.OUTPUTSELECT
+reset => reg_fstate.state16.OUTPUTSELECT
+reset => Z.OUTPUTSELECT
+reset => Z.OUTPUTSELECT
+reset => Z.OUTPUTSELECT
+reset => Z.OUTPUTSELECT
+clock => fstate~1.DATAIN
+x => Selector0.IN3
+x => Selector1.IN3
+x => Selector2.IN3
+x => Selector3.IN3
+x => Selector4.IN3
+x => Selector5.IN3
+x => Selector6.IN3
+x => Selector7.IN3
+x => Selector8.IN3
+x => Selector9.IN3
+x => Selector10.IN3
+x => Selector11.IN3
+x => Selector12.IN3
+x => Selector13.IN3
+x => Selector14.IN3
+x => Selector15.IN3
+x => Selector0.IN1
+x => Selector1.IN1
+x => Selector2.IN1
+x => Selector3.IN1
+x => Selector4.IN1
+x => Selector5.IN1
+x => Selector6.IN1
+x => Selector7.IN1
+x => Selector8.IN1
+x => Selector9.IN1
+x => Selector10.IN1
+x => Selector11.IN1
+x => Selector12.IN1
+x => Selector13.IN1
+x => Selector14.IN1
+x => Selector15.IN1
+Z[0] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+

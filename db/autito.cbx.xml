@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="autito">
+		<CBX_INST_ENTRY INSTANCE_NAME="|velocimetro|lpm_compare0:inst2|lpm_compare:LPM_COMPARE_component" CBX_FILE_NAME="cmpr_2mg.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
